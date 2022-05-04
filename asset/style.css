@@ -1,0 +1,18 @@
+:root
+{
+    --haut : 50px;
+}
+.d-flex
+{
+    margin-left: 200px;
+}
+.profile
+{
+    width: 100px;
+    height: var(--haut);
+}
+.profile img
+{
+    width: 100px;
+    height: var(--haut);
+}
