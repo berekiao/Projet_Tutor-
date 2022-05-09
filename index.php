@@ -1,4 +1,4 @@
-<?php include("actions/utilisateur/securityAction.php"); ?>
+<?php require('actions/utilisateur/loginAction.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +47,11 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Actualités</a></li>
           <li><a class="nav-link scrollto" href="#team">Louez ma voiture</a></li>
-          <li><a class="nav-link scrollto" href="login.php">Bonjour <?php echo $_SESSION['user'] ?></a></li>
+          <li><a class="nav-link scrollto" href="login.php"><?php if (!isset($_SESSION['user'])) {
+                                                                         echo 'Login'; 
+                                                                      }else {
+                                                                        echo 'Bonjour'." ".$_SESSION["user"];
+                                                                      } ?></a></li>
           <li><a class="nav-link scrollto" href="actions/utilisateur/logoutAction.php">Logout</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -230,8 +234,8 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="#">
-                  <img src="assets/img/team/1.jpg" alt="">
+                <a href="ViewCategorie.php">
+                  <img src="assets/img/team/1.jpg" alt="" >
                 </a>
                 
               </div>

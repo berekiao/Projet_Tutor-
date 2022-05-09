@@ -13,7 +13,7 @@
           <a class="nav-link" href="showUsers.php">Administrateurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="showCars.php">Clients</a>
+          <a class="nav-link" href="showClient.php">Clients</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="showVoiture.php">Voitures</a>

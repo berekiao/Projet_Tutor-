@@ -1,6 +1,6 @@
 <?php 
     
-    require("actions/utilisateur/showUsersAction.php");
+    require("actions/client/showClientAction.php");
 
 
 ?>
@@ -13,11 +13,11 @@
 <?php include ('dashboard.php'); ?> <br><br>
 
 <div class="container">
-    <a href="showClient.php" class="btn btn-primary">Ajouter un nouveau administrateur</a>
+   
     <br><br>
     <?php
     
-        while ($liste = $getInfoUsers->fetch() ) { ?>
+        while ($liste = $getInfoUser->fetch() ) { ?>
             <div class="card">
                 <h5 class="card-header">@<?= $liste['email']; ?></h5>
 
@@ -26,9 +26,7 @@
                         <?= $liste['nomutilisateur'] ;?> <?= $liste['prenomutilisateur']; ?>
                     </p>
 
-                    <a href="modifyUsers.php?modify=<?= $liste['idutilisateur']; ?>" class="btn btn-warning">Modifier </a> 
-        
-                </div>
+                    <a href="modifyClient.php?modify=<?= $liste['idutilisateur']; ?>" class="btn btn-warning">Modifier </a>                </div>
             </div>
             <br>
             <?php 
